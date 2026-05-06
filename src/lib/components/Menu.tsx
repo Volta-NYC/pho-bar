@@ -4,7 +4,6 @@ import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { menu, MENU_BANNER_IMAGE } from "@/lib/menuData"
-import PalmStrip from "./PalmStrip"
 
 export default function Menu() {
   const [active, setActive] = useState(menu[0].id)
@@ -22,8 +21,6 @@ export default function Menu() {
 
   return (
     <section id="menu" className="bg-cream-soft">
-      <PalmStrip height="h-12 md:h-16" />
-
       <div className="relative h-[34vh] md:h-[44vh] overflow-hidden">
         <Image
           src={MENU_BANNER_IMAGE}

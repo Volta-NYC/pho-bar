@@ -9,7 +9,6 @@ import {
   PHONE,
   YELP,
 } from "@/lib/menuData"
-import PalmStrip from "./PalmStrip"
 
 export default function Footer() {
   return (

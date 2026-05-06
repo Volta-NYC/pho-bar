@@ -4,7 +4,6 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { HERO_IMAGES, ORDER_URL } from "@/lib/menuData"
-import PalmStrip from "./PalmStrip"
 
 export default function Hero() {
   const [i, setI] = useState(0)
@@ -15,9 +14,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="top" className="relative bg-cream">
-      <PalmStrip height="h-10 md:h-14" className="mt-20" />
-
+    <section id="top" className="relative bg-cream pt-20">
       <div className="bg-tropical text-cream">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-[12px] md:text-sm tracking-[0.18em] uppercase">
