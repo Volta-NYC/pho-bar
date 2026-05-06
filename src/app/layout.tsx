@@ -1,11 +1,11 @@
 import "./globals.css"
-import { Bebas_Neue, Lora } from "next/font/google"
+import { Oswald, Lora } from "next/font/google"
 import Navbar from "@/lib/components/navbar"
 import Footer from "@/lib/components/footer"
 
-const display = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
+const display = Oswald({
+  subsets: ["latin", "vietnamese"],
+  weight: ["500", "600", "700"],
   variable: "--font-display",
   display: "swap",
 })

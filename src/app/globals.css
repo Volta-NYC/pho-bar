@@ -33,6 +33,7 @@ body {
 
   .display {
     font-family: var(--font-display), Impact, sans-serif;
+    font-weight: 600;
     letter-spacing: 0.04em;
   }
 
