@@ -13,7 +13,6 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream">
-      <PalmStrip height="h-8" />
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <Image
