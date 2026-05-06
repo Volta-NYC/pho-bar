@@ -1,10 +1,25 @@
 import "./globals.css"
+import { Bebas_Neue, Lora } from "next/font/google"
 import Navbar from "@/lib/components/navbar"
 import Footer from "@/lib/components/footer"
 
+const display = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-display",
+  display: "swap",
+})
+
+const serif = Lora({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-serif",
+  display: "swap",
+})
+
 export const metadata = {
-  title: "Business Name",
-  description: "Short description of the business."
+  title: "PhoBar — Contemporary Vietnamese in Brooklyn",
+  description:
+    "PhoBar is a contemporary Vietnamese restaurant in Park Slope, Brooklyn, serving phở, bánh mì, and rice bowls with bold, refined flavors.",
 }
 
 export default function RootLayout({
@@ -13,12 +28,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen flex flex-col">
+    <html lang="en" className={`${display.variable} ${serif.variable}`}>
+      <body className="min-h-screen bg-cream text-ink antialiased">
         <Navbar />
-        <main className="flex-1 max-w-6xl mx-auto px-6 py-12">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

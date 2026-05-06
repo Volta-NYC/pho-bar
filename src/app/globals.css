@@ -10,3 +10,39 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F0E8DA;
+  color: #1A1A1A;
+  font-family: var(--font-serif), Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .palm-bg {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5b76d0a096e76f63489286a6/1550682551335-Q65DESGHGNKCDKX17UGC/palm.jpg');
+    background-size: 420px auto;
+    background-repeat: repeat;
+  }
+
+  .display {
+    font-family: var(--font-display), Impact, sans-serif;
+    letter-spacing: 0.04em;
+  }
+
+  .neon-glow {
+    text-shadow:
+      0 0 6px #fde047,
+      0 0 18px #facc15,
+      0 0 36px #f59e0b;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { scrollbar-width: none; }
+}
