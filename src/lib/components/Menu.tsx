@@ -8,9 +8,15 @@ import { menu, MENU_BANNER_IMAGE } from "@/lib/menuData"
 export default function Menu() {
   const [active, setActive] = useState(menu[0].id)
   const tabsRef = useRef<HTMLDivElement>(null)
+  const hasHydrated = useRef(false)
 
   // keep active tab visible in horizontal scroller on mobile
   useEffect(() => {
+    if (!hasHydrated.current) {
+      hasHydrated.current = true
+      return
+    }
+
     const el = tabsRef.current?.querySelector<HTMLButtonElement>(
       `button[data-id="${active}"]`,
     )
